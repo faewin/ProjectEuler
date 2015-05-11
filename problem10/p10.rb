@@ -8,7 +8,8 @@ end
 
 def is_prime? n
   return false if n <= 1
-  (2...n).each {|i| return false if n%i == 0}
+  num = Math.sqrt(n)
+  (2..num).each {|i| return false if n % i == 0}
   true
 end
 
@@ -17,3 +18,4 @@ def list_sum list
 end
 
 p list_sum(primes(10))
+p list_sum(primes(2_000_000))

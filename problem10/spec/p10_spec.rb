@@ -13,11 +13,6 @@ describe "#is_prime?" do
     expect(is_prime? n).to be(false)
   end
 
-  it "should return true if n = 2" do 
-    n = 2
-    expect(is_prime? n).to be(true)
-  end
-
   it "should return false if n is not prime number" do
     n = 6
     expect(is_prime? n).to be(false)
