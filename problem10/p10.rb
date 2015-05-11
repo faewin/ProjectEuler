@@ -1,13 +1,19 @@
 def primes n
   primes = []
-  (2..n).each do |i|
-    n1 = 3**i % i
-    n2 = 3 % i
-    if n1 == n2
-      primes.push(i)
-    end
+  n.times do |num|
+    primes.push(num) if is_prime? num
   end
-  primes.select{|x| x % 2 != 0 ||x == 2}.reduce(:+)
+  primes
 end
-p primes 2_000_000
-#p primes 10
+
+def is_prime? n
+  return false if n <= 1
+  (2...n).each {|i| return false if n%i == 0}
+  true
+end
+
+def list_sum list
+  list.reduce(:+)
+end
+
+p list_sum(primes(10))
