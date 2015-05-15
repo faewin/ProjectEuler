@@ -7,7 +7,7 @@ describe '#primes' do
   end
 end
 
-describe "#is_prime?" do 
+describe "#is_prime?" do
   it "should return false if n <= 1" do
     n = 1
     expect(is_prime? n).to be(false)
