@@ -23,9 +23,16 @@ function primes(num) {
   return primeList;
 }
 
+function sumList(list) {
+  var sum = 0;
+  for (var i = 0; i < list.length; i++) {
+    sum += list[i];
+  }
+  return sum;
+}
+
 module.exports = {
   isPrime: isPrime,
-  primes: primes
+  primes: primes,
+  sumList: sumList
 };
-
-console.log(primes(10));

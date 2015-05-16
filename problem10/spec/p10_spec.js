@@ -20,6 +20,13 @@ describe('#isPrime', function() {
 describe('#primes', function() {
   it('should return a list of primes from 2 to nth number', function() {
     var num = 10;
-    assert.equal([2,3,5,7], app.primes(num));
+    assert.deepEqual([2,3,5,7], app.primes(num));
+  });
+});
+
+describe('#sumList', function() {
+  it('should return the sum of a list', function() {
+    var list = [1,2,3];
+    assert.equal(6, app.sumList(list));
   });
 });
