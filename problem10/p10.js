@@ -2,13 +2,30 @@ function isPrime(num) {
   if (num <= 1) {
     return false;
   }
-  var sqNum = Math.sqrt(num);
-  for (var i = 2; i < sqNum; i++) {
-    if (num % i === 0) {
+  var sqNum = Math.floor(Math.sqrt(num));
+  while (sqNum >= 2) {
+    if (num % sqNum === 0) {
       return false;
     }
+    sqNum--;
   }
   return true;
 }
 
-module.exports = isPrime;
+function primes(num) {
+  var primeList = [];
+
+  for (var i = 0; i < num; i++) {
+    if (isPrime(i)) {
+      primeList.push(i);
+    }
+  }
+  return primeList;
+}
+
+module.exports = {
+  isPrime: isPrime,
+  primes: primes
+};
+
+console.log(primes(10));
