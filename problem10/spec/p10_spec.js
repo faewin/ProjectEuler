@@ -1,18 +1,25 @@
 var assert = require('assert');
-var isPrime = require('../p10.js');
+var app = require('../p10.js');
 
 describe('#isPrime', function() {
   it('should return true if the number is prime', function() {
     var num = 11;
     var num2 = 7;
-    assert.equal(true, isPrime(num));
-    assert.equal(true, isPrime(num2));
+    assert.equal(true, app.isPrime(num));
+    assert.equal(true, app.isPrime(num2));
   });
 
   it('should return false if the number is not prime', function() {
     var num = 12;
     var num2 = 8;
-    assert.equal(false, isPrime(num));
-    assert.equal(false, isPrime(num2));
+    assert.equal(false, app.isPrime(num));
+    assert.equal(false, app.isPrime(num2));
+  });
+});
+
+describe('#primes', function() {
+  it('should return a list of primes from 2 to nth number', function() {
+    var num = 10;
+    assert.equal([2,3,5,7], app.primes(num));
   });
 });
