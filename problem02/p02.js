@@ -7,11 +7,11 @@ function solution() {
     fib.push(next_term);
   }
   for (var i = 0; i < fib.length; i++) {
-    if (fib[i] % 2 == 0) {
+    if (fib[i] % 2 === 0) {
       sum += fib[i];
     }
   }
   return sum;
 }
 
-console.log(solution());
+module.exports = solution;
