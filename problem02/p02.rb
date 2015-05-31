@@ -7,5 +7,3 @@ def solution
   end
   result.select{|num| num % 2 == 0}.reduce(:+)
 end
-
-p solution
