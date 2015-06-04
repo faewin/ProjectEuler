@@ -6,9 +6,8 @@ def solution():
         for y in xrange(100, 999):
             product = x * y
             string = str(product)
-            if string == string[::-1]:
-                if largestPalindrome < product:
-                    largestPalindrome = product
+            if string == string[::-1] and largestPalindrome < product:
+                largestPalindrome = product
     return largestPalindrome
 
 print(solution())
