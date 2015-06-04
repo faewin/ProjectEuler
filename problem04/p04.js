@@ -6,21 +6,21 @@ function solution() {
     for (var y = x; y <= 999; y++) {
       product = x * y;
       var string = product.toString();
-      if (isPalindrone(string)) {
-        if (largestPalindrome < product) {
-          largestPalindrome = product;
-        }
+      if (isPalindrome(string) && largestPalindrome < product) {
+        largestPalindrome = product;
       }
     }
   }
   return largestPalindrome;
 }
 
-function isPalindrone(string) {
+function isPalindrome(string) {
   string_reverse = string.split('').reverse().join('');
 
   return string === string_reverse;
 }
 
-console.log(solution());
-
+module.exports = {
+  isPalindrome: isPalindrome,
+  solution: solution
+};
