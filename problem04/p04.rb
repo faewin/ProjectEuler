@@ -1,15 +1,17 @@
 def solution
   possible_values = (100..999).to_a
   palindromes = []
-  product = 0
 
   possible_values.each do |i|
     possible_values.each do |j|
       product = i * j
-      palindromes << product if product.to_s == product.to_s.reverse
+      palindromes << product if is_palindrome?(product.to_s)
     end
   end
   palindromes.max
 end
 
-p solution
+def is_palindrome?(string)
+  return true if string == string.reverse
+  false
+end
