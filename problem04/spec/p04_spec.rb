@@ -11,3 +11,10 @@ describe '#is_palindrome?' do
     expect(is_palindrome?(string)).to eq(false)
   end
 end
+
+describe '#solution' do
+  it 'should return the largest 3 digit palindrome' do
+    result = 906609
+    expect(solution).to eq(result)
+  end
+end
